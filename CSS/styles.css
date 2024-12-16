@@ -1,0 +1,197 @@
+:root {
+    --color-bg: #493628;
+    --color-font: #f5f5f5;
+    --color-accent: #D6C0B3;
+    --color-hover: #E4E0E1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-font);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-shadow: 1px 1px 2px #000000;
+    letter-spacing: -3px;
+}
+
+/*  NavBar  */
+
+#navbar {
+    text-shadow: 1px 1px 2px #000000;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background: transparent !important;
+}
+
+.navbar-brand {
+    color: var(--color-font);
+    font-size: 2rem;
+    letter-spacing: -3px;
+    font-weight: 100 !important;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-font);
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--color-hover);
+    scale: 1.1;
+}
+
+/*  Landing Page */
+
+.landing-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: 0.3s ease-in;
+    animation: fadeInBottom 1s ease-in forwards;
+}
+
+
+.col-lg-4 {
+    position: relative;
+}
+
+
+.landing-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000000;
+    transition: 0.5s ease-in;
+}
+
+.landing-subheading {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 2px #000000;
+    transition: 0.5s ease-in;
+
+}
+
+.btn-primary {
+    background-color: var(--color-bg);
+    color: var(--color-font);
+    border: none !important;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-hover);
+    color: var(--color-bg);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.col-lg-4:hover .landing-img {
+    filter: brightness(40%);
+    scale: 1.1;
+}
+
+.col-lg-4:hover .hidden {
+    opacity: 1;
+}
+
+/* About Us */
+
+#about {
+    color: var(--color-font);
+    padding: 3rem;
+    text-shadow: 1px 1px 2px #000000;
+    background-image: url(/pictures/About_Section/luca-bravo-O453M2Liufs-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    text-shadow: none !important;
+    margin-bottom: 2rem;
+    transition: 0.3s ease-in;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px) saturate(130%);
+    -webkit-backdrop-filter: blur(5px) saturate(75%);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Contact */
+
+.contact-img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+/* Intersection Observer */
+section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s, transform 1s;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dynamic Form*/
+
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--color-bg);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: fadeInBottom 1s ease-in forwards;
+}
+
+/* Dynamic Forms */
+
+#book-iceland-section {
+    margin-top: 5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInBottom 1.5s ease-in forwards;
+}
+
+
+/* Keyframes */
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(75%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
