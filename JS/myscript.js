@@ -19,6 +19,11 @@ function createBookingIceland() {
     const bookIcelandSection = createSection();
     const form = createBookingForm();
 
+    if (document.getElementById('book-iceland-section')) {
+        alert('This Booking form already exists. Click CLOSE to jump to it.');
+        return;
+    }
+
     bookIcelandSection.appendChild(form);
     document.body.appendChild(bookIcelandSection);
 }
@@ -119,10 +124,10 @@ function createRadioOption(name, id, labelText, isChecked = false) {
 
 function createSubmitButton() {
     const buttonContainer = document.createElement('div');
-    buttonContainer.classList.add('mt-3', 'mb-3');
+    buttonContainer.classList.add('container', 'mt-3', 'mb-3', 'text-center');
 
     const button = document.createElement('button');
-    button.classList.add('btn', 'btn-secondary');
+    button.classList.add('btn', 'btn-secondary', 'mb-5');
     button.setAttribute('type', 'button');
     button.textContent = 'Submit';
 
